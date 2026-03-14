@@ -8,7 +8,7 @@ Trabalho desenvolvido na Pós graduação em Software Architecture na FIAP, para
 
 URL do vídeo de apresentação no YouTube:
 
-[<URL vídeo>](https://youtu.be/NAUngtLH66Q)
+[Hackaton - Processamento de vídeo em frames](https://youtu.be/NAUngtLH66Q)
 
 Repositórios envolvidos:
 
