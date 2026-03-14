@@ -8,7 +8,7 @@ Trabalho desenvolvido na Pós graduação em Software Architecture na FIAP, para
 
 URL do vídeo de apresentação no YouTube:
 
-<URL vídeo>
+[<URL vídeo>](https://youtu.be/NAUngtLH66Q)
 
 Repositórios envolvidos:
 
@@ -56,7 +56,6 @@ A infraestrutura alvo foi desenhada para AWS usando:
 - `CloudWatch Logs` para observabilidade básica.
 
 ## Arquitetura
-
 
 
 ## Responsabilidades Lógicas
