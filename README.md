@@ -112,7 +112,13 @@ A infraestrutura alvo foi desenhada para AWS usando:
 ### Dados
 
 - `AuthDb`: persistencia do microsservico de autenticacao.
+
+![alt text](image.png)
+
 - `VideoUploadDb`: persistencia compartilhada entre upload e processamento.
+
+![alt text](image-1.png)
+
 - `S3`: armazenamento do video original e do zip final.
 
 ## Runtime Flows
