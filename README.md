@@ -57,6 +57,7 @@ A infraestrutura alvo foi desenhada para AWS usando:
 
 ## Arquitetura
 
+![alt text](architecture-diagram.png)
 
 ## Responsabilidades Lógicas
 
