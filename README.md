@@ -115,7 +115,11 @@ A infraestrutura alvo foi desenhada para AWS usando:
 - `VideoUploadDb`: persistencia compartilhada entre upload e processamento.
 - `S3`: armazenamento do video original e do zip final.
 
-## Runtime Flows
+## Fluxo de funcionamento
+
+Collection utilizada para testes na apresentação:
+
+https://github.com/goncalves-c97/fiap-hk-readme/blob/main/Hackaton%20Fase%205.postman_collection.json
 
 ### 1. Autenticação
 
