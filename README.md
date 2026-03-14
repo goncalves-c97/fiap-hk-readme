@@ -2,6 +2,8 @@
 
 Repositório que explica sobre a solução desenvolvida no Hackaton, além de agregar os caminhos dos repositórios desenvolvidos.
 
+Desenvolvido por: Carlos Henrique Bezerra Gonçalves - RM 361130
+
 Trabalho desenvolvido na Pós graduação em Software Architecture na FIAP, para o Hackaton.
 
 URL do vídeo de apresentação no YouTube:
@@ -26,7 +28,7 @@ fiap-hk-notification-ms <br />
 Repo: https://github.com/goncalves-c97/fiap-hk-notification-ms <br />
 SonarQube: https://sonarcloud.io/summary/new_code?id=goncalves-c97_fiap-hk-notification-ms <br />
 
-# Architecture Documentation
+# Documentação da Arquitetura
 
 ## Overview
 
