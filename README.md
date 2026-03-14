@@ -32,9 +32,9 @@ SonarQube: https://sonarcloud.io/summary/new_code?id=goncalves-c97_fiap-hk-notif
 
 ## Overview
 
-Esta solucao implementa uma plataforma de processamento de videos baseada em microsservicos, com foco em escalabilidade horizontal, resiliencia a picos e persistencia de dados.
+Esta solução implementa uma plataforma de processamento de videos baseada em microsservicos, com foco em escalabilidade horizontal, resiliencia a picos e persistencia de dados.
 
-Os servicos existentes sao:
+Os serviços existentes são:
 
 - `auth-ms`: autenticação de usuários e emissão de JWT.
 - `video-upload-ms`: upload do video, consulta de status e publicação do evento de processamento.
