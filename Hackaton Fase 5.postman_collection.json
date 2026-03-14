@@ -1,0 +1,311 @@
+{
+  "info": {
+    "_postman_id": "7fdb93e4-3e33-4719-b6d0-733a6c2c1fb8",
+    "name": "Hackaton Fase 5",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17515682",
+    "_collection_link": "https://go.postman.co/collection/17515682-7fdb93e4-3e33-4719-b6d0-733a6c2c1fb8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Criação usuário",
+      "item": [
+        {
+          "name": "Inserir usuário",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"usuario\": \"carlos\",\r\n  \"email\": \"carlos_henrique97@outlook.com.br\",\r\n  \"senha\": \"1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{AUTH_MS_URL}}/Cliente/InsertNew",
+              "host": [
+                "{{AUTH_MS_URL}}"
+              ],
+              "path": [
+                "Cliente",
+                "InsertNew"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Autenticação",
+      "item": [
+        {
+          "name": "Autenticacao por email",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var responseBody = pm.response.json();\r",
+                  "var token = responseBody.token;\r",
+                  "pm.collectionVariables.set(\"TOKEN_USUARIO\", token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authType",
+                "value": "Email",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"carlos_henrique97@outlook.com.br\",\r\n  \"senha\": \"1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{AUTH_MS_URL}}/Autenticacao/LoginCliente",
+              "host": [
+                "{{AUTH_MS_URL}}"
+              ],
+              "path": [
+                "Autenticacao",
+                "LoginCliente"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Autenticacao por usuário",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var responseBody = pm.response.json();\r",
+                  "var token = responseBody.token;\r",
+                  "pm.collectionVariables.set(\"TOKEN_USUARIO\", token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authType",
+                "value": "Usuario",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"usuario\": \"carlos\",\r\n  \"senha\": \"1234\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{AUTH_MS_URL}}/Autenticacao/LoginCliente",
+              "host": [
+                "{{AUTH_MS_URL}}"
+              ],
+              "path": [
+                "Autenticacao",
+                "LoginCliente"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Upload vídeo",
+      "item": [
+        {
+          "name": "Upload vídeo",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{TOKEN_USUARIO}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "Arquivo",
+                  "type": "file",
+                  "uuid": "9324cbd7-0542-448f-adb3-fdf6e8fb30b3",
+                  "src": "/C:/Users/carlo/Downloads/sample_beach.mp4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{VIDEO_UPLOAD_MS_URL}}/Videos/Upload",
+              "host": [
+                "{{VIDEO_UPLOAD_MS_URL}}"
+              ],
+              "path": [
+                "Videos",
+                "Upload"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Consultas",
+      "item": [
+        {
+          "name": "Listagem completa dos vídeos do uuário",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{TOKEN_USUARIO}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{VIDEO_UPLOAD_MS_URL}}/Videos/ListUploads",
+              "host": [
+                "{{VIDEO_UPLOAD_MS_URL}}"
+              ],
+              "path": [
+                "Videos",
+                "ListUploads"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listagem de status dos vídeos do usuário",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{TOKEN_USUARIO}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{VIDEO_UPLOAD_MS_URL}}/Videos/ListVideosStatus",
+              "host": [
+                "{{VIDEO_UPLOAD_MS_URL}}"
+              ],
+              "path": [
+                "Videos",
+                "ListVideosStatus"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "AUTH_MS_URL",
+      "value": "",
+      "disabled": true
+    },
+    {
+      "key": "VIDEO_UPLOAD_MS_URL",
+      "value": "",
+      "disabled": true
+    },
+    {
+      "key": "AUTH_MS_URL",
+      "value": ""
+    },
+    {
+      "key": "VIDEO_UPLOAD_MS_URL",
+      "value": ""
+    },
+    {
+      "key": "TOKEN_USUARIO",
+      "value": ""
+    }
+  ]
+}
