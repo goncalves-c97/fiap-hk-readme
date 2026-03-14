@@ -12,21 +12,25 @@ URL do vídeo de apresentação no YouTube:
 
 Repositórios envolvidos:
 
-fiap-hk-infra <br />
+## fiap-hk-infra <br />
 Repo: https://github.com/goncalves-c97/fiap-hk-infra <br />
 
-fiap-hk-auth-ms <br />
+## fiap-hk-auth-ms <br />
 Repo: https://github.com/goncalves-c97/fiap-hk-auth-ms <br />
 SonarQube: https://sonarcloud.io/summary/new_code?id=goncalves-c97_fiap-hk-auth-ms <br /><br />
-fiap-hk-video-upload-ms <br />
+## fiap-hk-video-upload-ms <br />
 Repo: https://github.com/goncalves-c97/fiap-hk-video-upload-ms <br />
 SonarQube: https://sonarcloud.io/summary/new_code?id=goncalves-c97_fiap-hk-video-upload-ms <br /><br />
-fiap-hk-video-processing-ms <br />
+## fiap-hk-video-processing-ms <br />
 Repo: https://github.com/goncalves-c97/fiap-hk-video-processing-ms <br />
 SonarQube: https://sonarcloud.io/summary/new_code?id=goncalves-c97_fiap-hk-video-processing-ms <br /><br />
-fiap-hk-notification-ms <br />
+## fiap-hk-notification-ms <br />
 Repo: https://github.com/goncalves-c97/fiap-hk-notification-ms <br />
 SonarQube: https://sonarcloud.io/summary/new_code?id=goncalves-c97_fiap-hk-notification-ms <br />
+
+# Trabalho proposto
+
+Vocês foram contratados pela empresa FIAP X que precisa avançar no desenvolvimento de um projeto de processamento de imagens. Em uma rodada de investimentos, a empresa apresentou um projeto simples que processa um vídeo e retorna as imagens dele em um arquivo .zip. Os investidores gostaram tanto do projeto, que querem investir em uma versão onde eles possam enviar um vídeo e fazer download deste zip.
 
 # Documentação da Arquitetura
 
